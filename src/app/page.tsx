@@ -25,18 +25,22 @@ import {
 const team = [
   {
     name: "Kingsley W",
+    image: "members/kingsley.png",
   },
   {
     name: "Andre N",
   },
   {
     name: "Sean C",
+    image: "members/sean.jpg",
   },
   {
     name: "Oliver L",
+    image: "members/oliver.png",
   },
   {
     name: "Subesh S",
+    image: "members/subesh.png",
   },
   {
     name: "Chris W",
@@ -319,9 +323,20 @@ export default function Home() {
                 className="border-white/10 bg-white/5 text-white card-hover"
               >
                 <CardHeader className="space-y-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-400/15">
-                    <Users className="h-5 w-5 text-sky-300" />
-                  </div>
+                  {member.image ? (
+                    <div className="h-12 w-12 overflow-hidden rounded-full border border-white/15">
+                      <img
+                        src={member.image}
+                        alt={`${member.name} profile`}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-400/15">
+                      <Users className="h-5 w-5 text-sky-300" />
+                    </div>
+                  )}
                   <CardTitle className="text-lg">{member.name}</CardTitle>
                 </CardHeader>
               </Card>
