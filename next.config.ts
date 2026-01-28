@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const repoName = "FLL-Lebob-Unearthed";
+const repoName = "Lebob-Site";
 const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
 
 const nextConfig: NextConfig = {
