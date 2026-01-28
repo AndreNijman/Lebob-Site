@@ -25,44 +25,28 @@ import {
 
 const team = [
   {
-    name: "Member One",
-    role: "Lead Builder",
-    focus: "Chassis, attachments, and drive train",
+    name: "Kingsley Wong",
   },
   {
-    name: "Member Two",
-    role: "Program Lead",
-    focus: "Autonomous runs and precision tuning",
+    name: "Andre Nijman",
   },
   {
-    name: "Member Three",
-    role: "Research Lead",
-    focus: "Innovation project and storytelling",
+    name: "Sean Chan",
   },
   {
-    name: "Member Four",
-    role: "Strategy",
-    focus: "Mission planning and points optimization",
+    name: "Oliver Liu",
   },
   {
-    name: "Member Five",
-    role: "Systems",
-    focus: "Sensors, wiring, and reliability checks",
+    name: "Subesh Sukumarn",
   },
   {
-    name: "Member Six",
-    role: "Design",
-    focus: "Prototype testing and CAD sketches",
+    name: "Chris Wang",
   },
   {
-    name: "Member Seven",
-    role: "Driver",
-    focus: "Field practice and timing control",
+    name: "Aaron Zhang",
   },
   {
-    name: "Member Eight",
-    role: "Outreach",
-    focus: "Community demos and team spirit",
+    name: "Leven Shi",
   },
 ];
 
@@ -112,23 +96,24 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <main className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-70 bg-grid" />
         <section className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 pb-16 pt-16 sm:px-10 lg:flex-row lg:items-center lg:gap-16">
-          <div className="absolute -left-32 top-10 h-72 w-72 rounded-full bg-emerald-500/20 blur-[140px] animate-float" />
-          <div className="absolute -right-32 top-20 h-72 w-72 rounded-full bg-sky-400/20 blur-[140px] animate-float delay-3" />
+          <div className="absolute -left-40 top-4 h-80 w-80 rounded-full bg-emerald-500/20 blur-[160px] animate-float" />
+          <div className="absolute -right-32 top-14 h-80 w-80 rounded-full bg-sky-400/20 blur-[160px] animate-float delay-3" />
 
           <div className="relative z-10 flex flex-1 flex-col gap-6">
             <Badge className="w-fit bg-white/10 text-white hover:bg-white/20 animate-fade-up">
               FLL Robotics Team -- 8 Members
             </Badge>
             <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl animate-fade-up delay-1">
-              We are <span className="text-emerald-300">Lebob</span> -- builders,
-              coders, and storytellers shaping the future of robotics.
+              Lebob is a
+              <span className="text-gradient"> fearless FLL team</span> building
+              robots and ideas that compete and inspire.
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-slate-200/90 animate-fade-up delay-2">
-              Lebob is a FIRST LEGO League team that thrives on creative
-              engineering, teamwork, and curiosity. We design robots, develop
-              innovative solutions, and support each other to deliver our best
-              competition runs.
+              We mix engineering, coding, and research to build reliable robots
+              and tell the story behind every mission. Every run is a
+              collaboration, every win a shared moment.
             </p>
             <div className="flex flex-wrap gap-3 animate-fade-up delay-3">
               <Button asChild className="bg-emerald-400 text-slate-950 hover:bg-emerald-300">
@@ -160,7 +145,7 @@ export default function Home() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur"
                 >
                   <p className="text-2xl font-semibold text-white">{stat.value}</p>
                   <p className="text-sm text-slate-300">{stat.label}</p>
@@ -170,50 +155,65 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 flex w-full max-w-md flex-col gap-6 animate-fade-up delay-2">
-            <Card className="border-white/10 bg-white/5 text-white animate-fade-in">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-xl">
-                  <Sparkles className="h-5 w-5 text-emerald-300" />
-                  About Lebob
-                </CardTitle>
+            <Card className="glass text-white card-hover">
+              <CardHeader className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="flex items-center gap-2 text-xl">
+                    <Sparkles className="h-5 w-5 text-emerald-300" />
+                    Mission Console
+                  </CardTitle>
+                  <Badge className="bg-emerald-400/20 text-emerald-200">
+                    Active
+                  </Badge>
+                </div>
                 <CardDescription className="text-slate-300">
-                  Our team blends engineering, research, and storytelling to
-                  build robots that can think.
+                  A quick look at how we operate together.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col gap-4">
+              <CardContent className="flex flex-col gap-5">
                 <div className="flex items-center gap-3">
-                  <Image
-                    src="/lebob.png"
-                    alt="Lebob team logo"
-                    width={72}
-                    height={72}
-                    className="rounded-2xl border border-white/10 bg-white/5"
-                  />
+                  <div className="relative h-16 w-16">
+                    <div className="absolute inset-0 rounded-2xl bg-emerald-400/20 blur-sm" />
+                    <Image
+                      src="/lebob.png"
+                      alt="Lebob team logo"
+                      width={64}
+                      height={64}
+                      className="relative rounded-2xl border border-white/10 bg-white/5"
+                    />
+                  </div>
                   <div>
-                    <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">
+                    <p className="text-xs uppercase tracking-[0.3em] text-emerald-200">
                       Team Name
                     </p>
                     <p className="text-2xl font-semibold">Lebob</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Trophy className="mt-1 h-5 w-5 text-emerald-300" />
-                  <p className="text-sm text-slate-200">
-                    We prepare for competition with repeatable builds, reliable
-                    code, and a story we love to share.
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <HeartHandshake className="mt-1 h-5 w-5 text-emerald-300" />
-                  <p className="text-sm text-slate-200">
-                    Teamwork is our advantage -- we listen, brainstorm, and solve
-                    problems together.
-                  </p>
+                <div className="grid gap-3">
+                  {[
+                    {
+                      icon: Trophy,
+                      text: "Practice cycles that maximize consistency.",
+                    },
+                    {
+                      icon: HeartHandshake,
+                      text: "Collaboration keeps our ideas sharp.",
+                    },
+                    {
+                      icon: BadgeCheck,
+                      text: "Core values guide every build decision.",
+                    },
+                  ].map((item) => (
+                    <div key={item.text} className="flex items-start gap-3">
+                      <item.icon className="mt-1 h-5 w-5 text-emerald-300" />
+                      <p className="text-sm text-slate-200">{item.text}</p>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-white/10 bg-gradient-to-br from-white/10 via-transparent to-emerald-500/10 text-white animate-fade-in delay-2">
+
+            <Card className="border-white/10 bg-gradient-to-br from-white/10 via-transparent to-emerald-500/10 text-white card-hover">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <BadgeCheck className="h-5 w-5 text-sky-300" />
@@ -246,7 +246,7 @@ export default function Home() {
               {values.map((value) => (
                 <Card
                   key={value.title}
-                  className="border-white/10 bg-white/5 text-white animate-fade-in"
+                  className="border-white/10 bg-white/5 text-white card-hover"
                 >
                   <CardHeader className="space-y-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-400/20">
@@ -264,7 +264,7 @@ export default function Home() {
         </section>
 
         <section className="mx-auto w-full max-w-6xl px-6 py-14 sm:px-10 animate-fade-up delay-1">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 animate-fade-in">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-glow">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <p className="text-sm uppercase tracking-[0.3em] text-sky-200">
@@ -283,7 +283,7 @@ export default function Home() {
               {milestones.map((milestone, index) => (
                 <div
                   key={milestone.title}
-                  className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 via-transparent to-transparent p-4 animate-fade-in"
+                  className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 via-transparent to-transparent p-4 card-hover"
                 >
                   <p className="text-sm font-semibold text-emerald-200">
                     {String(index + 1).padStart(2, "0")}
@@ -316,27 +316,21 @@ export default function Home() {
             {team.map((member) => (
               <Card
                 key={member.name}
-                className="border-white/10 bg-white/5 text-white animate-fade-in"
+                className="border-white/10 bg-white/5 text-white card-hover"
               >
                 <CardHeader className="space-y-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-400/15">
                     <Users className="h-5 w-5 text-sky-300" />
                   </div>
                   <CardTitle className="text-lg">{member.name}</CardTitle>
-                  <CardDescription className="text-slate-200">
-                    {member.role}
-                  </CardDescription>
                 </CardHeader>
-                <CardContent className="text-sm text-slate-300">
-                  {member.focus}
-                </CardContent>
               </Card>
             ))}
           </div>
         </section>
 
         <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-6 sm:px-10 animate-fade-up delay-2">
-          <Card className="border-white/10 bg-gradient-to-r from-emerald-500/20 via-sky-500/10 to-transparent text-white animate-fade-in">
+          <Card className="border-white/10 bg-gradient-to-r from-emerald-500/20 via-sky-500/10 to-transparent text-white card-hover">
             <CardContent className="flex flex-col gap-6 p-8 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-sm uppercase tracking-[0.3em] text-emerald-200">
@@ -368,7 +362,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-white/10 bg-black/30 animate-fade-in delay-2">
+      <footer className="border-t border-white/10 bg-black/30">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-10">
           <div className="flex items-center gap-2">
             <Sparkles className="h-4 w-4 text-emerald-300" />

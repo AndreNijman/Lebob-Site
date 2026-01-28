@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
+const repoName = "FLL-Lebob-Unearthed";
+const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+  basePath: isGitHubActions ? `/${repoName}` : "",
+  assetPrefix: isGitHubActions ? `/${repoName}` : "",
 };
 
 export default nextConfig;
