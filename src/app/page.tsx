@@ -24,28 +24,28 @@ import {
 
 const team = [
   {
-    name: "Kingsley Wong",
+    name: "Kingsley W",
   },
   {
-    name: "Andre Nijman",
+    name: "Andre N",
   },
   {
-    name: "Sean Chan",
+    name: "Sean C",
   },
   {
-    name: "Oliver Liu",
+    name: "Oliver L",
   },
   {
-    name: "Subesh Sukumarn",
+    name: "Subesh S",
   },
   {
-    name: "Chris Wang",
+    name: "Chris W",
   },
   {
-    name: "Aaron Zhang",
+    name: "Aaron Z",
   },
   {
-    name: "Leven Shi",
+    name: "Leven S",
   },
 ];
 
