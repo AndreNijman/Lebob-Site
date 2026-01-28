@@ -92,6 +92,8 @@ const milestones = [
   },
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -175,7 +177,7 @@ export default function Home() {
                   <div className="relative h-16 w-16">
                     <div className="absolute inset-0 rounded-2xl bg-emerald-400/20 blur-sm" />
                     <Image
-                      src="/lebob.png"
+                      src={`${basePath}/lebob.png`}
                       alt="Lebob team logo"
                       width={64}
                       height={64}
