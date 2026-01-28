@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   ArrowUpRight,
   BadgeCheck,
@@ -92,8 +91,6 @@ const milestones = [
   },
 ];
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -176,12 +173,13 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <div className="relative h-16 w-16">
                     <div className="absolute inset-0 rounded-2xl bg-emerald-400/20 blur-sm" />
-                    <Image
-                      src={`${basePath}/lebob.png`}
+                    <img
+                      src="lebob.png"
                       alt="Lebob team logo"
                       width={64}
                       height={64}
                       className="relative rounded-2xl border border-white/10 bg-white/5"
+                      loading="lazy"
                     />
                   </div>
                   <div>
